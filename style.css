@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    font-family: "Montserrat", sans-serif;
+    
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(26, 17, 2, 0.7), rgba(26, 17, 2, 0.7)),url(images/image3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav img{
+    width: 300px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffd100;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 28px;
+    color: #ffffff;
+}
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    border: 1px solid #ffd100;
+    background: #ffd100;
+    transition: 0.7s;
+    color: rgb(0, 0, 0);
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+
+@media(max-width: 992px){
+    nav img{
+        width: 250px;
+        position: relative;
+    }
+    .text-box{
+        width: 70%;
+    }
+    .text-box h1{
+        font-size: 46px;
+    }
+    .text-box p{
+        font-size: 24px;
+    }
+
+  }
+@media(max-width: 768px) {
+    .checkbtn {
+        display: block;
+      }
+    nav img{
+        width: 225px;
+        position: relative;
+    }
+    .text-box h1{
+    font-size: 32px;
+    }
+    .text-box p{
+        font-size: 18px;
+    }
+    .nav-links{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #363635;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+    }
+    .nav-links ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .nav-links ul li a{
+        font-size: 20px;
+    }
+
+#check:checked ~ .nav-links{
+    left:0
+    }
+}
+
+/* ------- Footer -------*/
+.footer {
+    background-color: #000000; 
+    color: white; 
+    padding: 40px 20px; 
+    text-align: center; 
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.footer-info {
+    flex: 1; 
+    text-align: left; 
+}
+
+.footer-info h2 {
+    margin-bottom: 10px; 
+    font-size: 24px; 
+}
+
+.footer-info p {
+    margin: 0; 
+    line-height: 1.6; 
+}
+
+.footer-icons {
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 15px; 
+}
+
+.footer-icons i {
+    font-size: 28px; 
+    color: white; 
+    cursor: pointer; 
+    transition: color 0.3s; 
+}
+
+.footer-icons i:hover {
+    color: #ffd100; 
+}
+
+.footer-bottom {
+    margin-top: 20px; 
+    font-size: 14px; 
+    color: #bbb; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .footer-info {
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .footer-icons {
+        justify-content: center; 
+    }
+
+    .footer-icons i {
+        font-size: 24px;
+}
+
+@media (max-width: 480px) {
+    .footer-info h2 {
+        font-size: 20px; 
+    }
+
+    .footer-info p {
+        font-size: 14px; 
+    }
+
+    .footer-bottom {
+        font-size: 12px; 
+    }
+}
+}
+
+/* -------------- Страница За мен ---------- */
+
+.about-me {
+    width: 100%;
+    margin: auto;
+    padding: 40px 20px; 
+    background-color: #f0f0f0; 
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 20px 0; 
+    flex-wrap: wrap; 
+}
+
+.about-col {
+    flex: 1;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; 
+    text-align: justify;
+}
+
+.about-col img {
+    max-width: 60%; /* Make image responsive */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: center;
+}
+
+.about-col h1 {
+    padding-top: 0;
+    font-size: 28px; 
+    color: #333; 
+}
+
+.about-col p {
+    padding: 15px 0 25px;
+    font-size: 18px; 
+    color: #555; 
+    line-height: 1.6; 
+}
+
+@media (max-width: 1200px) {
+    .about-col {
+        flex-basis: 48%; /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .about-col {
+        flex-basis: 100%; /* Stack columns on smaller screens */
+    }
+    .about-col h1 {
+        font-size: 24px;
+    }
+    .about-col p {
+        font-size: 16px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .about-col {
+        margin-bottom: 30px; /* Space between stacked items */
+    }
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-col h1 {
+        font-size: 20px; 
+    }
+    .about-col p {
+        font-size: 14px; 
+    }
+}
+
+
+/*-----Страница за Цени-----*/
+.pricing {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pricing h2, .pricing h3 {
+    text-align: center;
+    color: #333;
+}
+
+.pricing h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.pricing h3 {
+    font-size: 1.8em;
+    margin: 40px 0 20px;
+    
+}
+
+.pricing p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.packages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.package {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+}
+
+.package h4 {
+    color: #b19707;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.package ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.package ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.package ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.pricing ul li {
+    padding: 8px 0;
+    color: #555;
+}
+.faq {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.faq h3 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    color: #333; 
+}
+
+.faq-container {
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 40px; 
+}
+
+.faq-item {
+    flex: 1 1 calc(50% - 30px); /* Two columns with space between */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 20px; 
+}
+
+.faq-item h4 {
+    margin-bottom: 8px; 
+    padding-top: 10px;
+    color: #b19707; 
+    font-size: 18px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.faq-item p {
+    color: #555; 
+    line-height: 1.6; 
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+.pricing a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .packages {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .package {
+        flex-basis: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 480px){
+    .faq-item {
+        flex: 1 1 100%; /* Stack items in a single column */
+    }
+}
+
+
+/*-----Страница за Галерия-----*/
+.gallery-background {
+    background-color: #f9f9f9; 
+    padding: 20px; 
+}
+.gallery {
+    margin: 20px auto; /* Center the gallery with margin */
+    max-width: 1200px; /* Maximum width of the gallery */
+    padding: 10px; /* Padding around the gallery */
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    text-align: center; 
+}
+
+.gallery h1 {
+    font-size: 2.5em; /* Larger font size for the title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #333; 
+}
+
+.gallery p {
+    font-size: 1.2em; /* Slightly larger font for the description */
+    margin-bottom: 20px; /* Space below the description */
+    color: #666; /* Lighter color for the description */
+}
+
+.gallery-photos {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: space-between; 
+}
+
+.photo {
+    position: relative; /* Position relative for absolute positioning of the description */
+    flex: 1 1 calc(33.333% - 20px); /* Each item takes up 1/3 of the container minus margin */
+    margin: 10px; /* Space around each item */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    border-radius: 8px; /* Rounded corners for each item */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.photo:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.photo img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; 
+    display: block; /* Remove bottom space in images */
+}
+
+/* Description */
+.description {
+    position: absolute; 
+    bottom: 0; /* Align to the bottom of the item */
+    left: 0; 
+    right: 0; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    padding: 10px; /* Padding around the text */
+    text-align: center; 
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.photo:hover .description {
+    opacity: 1; /* Show description on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photo {
+        flex: 1 1 calc(50% - 20px); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        flex: 1 1 100%; /* 1 column on small screens */
+    }
+}
